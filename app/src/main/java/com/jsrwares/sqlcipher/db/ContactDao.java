@@ -16,7 +16,7 @@ import net.sqlcipher.database.SQLiteDatabase;
 public class ContactDao extends Dao {
 
     public ContactDao(Activity context, String password) {
-        ConnectorTableDefinitions tableDefs = new ConnectorTableDefinitions();
+        ConnectorTableDefinitions tableDefs = new ConnectorTables();
         tableDefs.addTable("contact", getQueryCreate());
         mCconnector = Connector.getInstance(context, tableDefs);
         open(password);

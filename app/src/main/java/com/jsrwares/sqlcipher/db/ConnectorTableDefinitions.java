@@ -1,29 +1,14 @@
 package com.jsrwares.sqlcipher.db;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class ConnectorTableDefinitions {
+public interface ConnectorTableDefinitions {
 
-    private int tableCount = 0;
-    private List<String> tables = new ArrayList<String>();
-    private List<String> createQuerys = new ArrayList<String>();
+    void addTable(String tableName, String createQuery);
 
-    public void addTable(String tableName, String createQuery) {
-        tables.add(tableName);
-        createQuerys.add(createQuery);
-        tableCount++;
-    }
+    int getTableCount();
 
-    public int getTableCount() {
-        return tableCount;
-    }
+    List<String> getTables();
 
-    public List<String> getTables() {
-        return tables;
-    }
-
-    public List<String> getCreateQuerys() {
-        return createQuerys;
-    }
+    List<String> getCreateQuerys();
 }
