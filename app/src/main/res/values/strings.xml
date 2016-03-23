@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SQLCipher Demo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="main_activity_header">Contact Database</string>
+    <string name="add_activity_header">Add New Contact</string>
+
+    <string name="last_name_lable">Last Name</string>
+    <string name="first_name_label">First Name</string>
+    <string name="email_label">Email</string>
+    <string name="phone_label">Phone</string>
+
+    <string name="label_save">Encrypt and Save</string>
+    <string name="label_cancel_add">Cancel</string>
+
+    <string name="main_directions">View Contacts or add a new one.</string>
+    <string name="save_directions">
+        Fill out form and press the button to encrypt and save.
+    </string>
+    <string name="add_label">Add New Entry</string>
+    <string name="title_activity_add_contact">AddContactActivity</string>
+
+    <string name="database_name">contactdatabase.db</string>
+    <string name="database_version">2</string>
+    <string name="database_password">pass123</string>
+</resources>
