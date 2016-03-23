@@ -221,21 +221,6 @@ public class ContactDao extends Dao {
         return sql;
     }
 
-    private String sqlFormatValue(Object obj, boolean isQuoted) {
-        String returnVal = "";
-        if (obj == null)
-            returnVal = "null";
-        else {
-            if (isQuoted) {
-                String strValue = obj.toString();
-                strValue = strValue.replace("'", "''");
-                returnVal = "'" + strValue + "'";
-            } else
-                returnVal = obj.toString();
-        }
-        return returnVal;
-    }
-
     public String getQueryDelete() {
         String sql = "DELETE FROM contact";
         return sql;

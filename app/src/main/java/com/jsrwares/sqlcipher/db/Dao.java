@@ -2,8 +2,6 @@ package com.jsrwares.sqlcipher.db;
 
 import android.util.Log;
 
-import com.jsrwares.sqlcipher.R;
-
 import net.sqlcipher.Cursor;
 import net.sqlcipher.SQLException;
 import net.sqlcipher.database.SQLiteDatabase;
@@ -86,4 +84,20 @@ public abstract class Dao {
                 " Exception : " + e.getStackTrace().toString();
         Log.e("Dao.java", message);
     }
+
+    protected String sqlFormatValue(Object obj, boolean isQuoted) {
+        String returnVal = "";
+        if (obj == null)
+            returnVal = "null";
+        else {
+            if (isQuoted) {
+                String strValue = obj.toString();
+                strValue = strValue.replace("'", "''");
+                returnVal = "'" + strValue + "'";
+            } else
+                returnVal = obj.toString();
+        }
+        return returnVal;
+    }
+
 }
